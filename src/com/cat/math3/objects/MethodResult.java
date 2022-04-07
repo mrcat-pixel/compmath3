@@ -2,8 +2,8 @@ package com.cat.math3.objects;
 
 public class MethodResult {
 
-    private double value;
-    private int partitionNumber;
+    private final double value;
+    private final int partitionNumber;
 
     public double getValue() {
         return value;

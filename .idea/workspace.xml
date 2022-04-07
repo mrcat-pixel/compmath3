@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b8a37a8d-d91f-46b7-a920-9ad16b6ed0e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/cat/math3/objects/Func.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/cat/math3/services/Process.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cat/math3/methods/RectangleMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/cat/math3/objects/MethodResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/cat/math3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cat/math3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/cat/math3/services/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/cat/math3/services/Process.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +91,10 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -118,7 +121,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649281486251</updated>
-      <workItem from="1649281494291" duration="740000" />
+      <workItem from="1649281494291" duration="1022000" />
+      <workItem from="1649339243059" duration="13402000" />
     </task>
     <servers />
   </component>

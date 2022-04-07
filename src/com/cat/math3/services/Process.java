@@ -1,6 +1,8 @@
 package com.cat.math3.services;
 
+import com.cat.math3.methods.RectangleMethod;
 import com.cat.math3.objects.Func;
+import com.cat.math3.objects.MethodResult;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -19,9 +21,9 @@ public class Process {
             if (temp.equals("q") || temp.equals("quit")) break;
 
             switch (temp) {
-                case "calc"          -> calculate();
-                case "h", "help"     -> help();
-                default              -> err();
+                case "calc"         -> calculate();
+                case "h", "help"    -> help();
+                default             -> err();
             }
         }
     }
@@ -54,10 +56,10 @@ public class Process {
     private void calculate() {
         printLine();
         System.out.println("""
-            Choose an equation to solve:
-            1: x + cos(x) - 0.67x^3 - 1 = 0
-            2: x^3 + 2x^2 - 5x - 5 = 0
-            3: -x^2 + 5 = 0""");
+            Choose a function to calculate the integral for:
+            1: y = x + cos(x) - 0.67x^3 - 1
+            2: y = x^3 + 2x^2 - 5x - 5
+            3: y = sin(1/x)""");
         printLine();
         int eq_id = getId();
 
@@ -77,13 +79,36 @@ public class Process {
             default -> new Func() {
                 @Override
                 public double f(double x) {
-                    return -Math.pow(x, 2) + 5;
+                    return Math.sin(1/x);
                 }
             };
         };
 
         System.out.println("Input precision:");
         double precision = getFloat();
+
+        System.out.println("Input the beginning of the range:");
+        double rangeBegin = getFloat();
+        System.out.println("Input the end of the range:");
+        double rangeEnd = getFloat();
+
+        printLine();
+
+        MethodResult right = RectangleMethod.rectangleMethod(function, precision, rangeBegin, rangeEnd, 1);
+        MethodResult mid = RectangleMethod.rectangleMethod(function, precision, rangeBegin, rangeEnd, 0.5);
+        MethodResult left = RectangleMethod.rectangleMethod(function, precision, rangeBegin, rangeEnd, 0);
+
+        if (Double.isNaN(right.getValue() + mid.getValue() + left.getValue())
+                || Double.isInfinite(right.getValue() + mid.getValue() + left.getValue())) {
+            System.out.println("Couldn't find the solution.");
+        }
+        else {
+            System.out.println("Using the right rule:\n" + right);
+            System.out.println("Using the mid rule:\n" + mid);
+            System.out.println("Using the left rule:\n" + left);
+        }
+
+        printLine();
     }
 
 
